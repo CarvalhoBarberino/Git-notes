@@ -1,0 +1,5 @@
+Comando para verivicar versão
+	git --version
+
+Comando para iniciar um repositório:
+	git init
