@@ -7,7 +7,6 @@ Comando para iniciar um repositório:
 Comando para adicionar arquivo
 	git add 'Comando em git'
 	git add .
-	git add *
 
 Comando para commitar, dar commit
 	git commit -m "Escreva aqui seu comentário"
