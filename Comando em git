@@ -1,6 +1,9 @@
 Comando para verivicar versão
 	git --version
 
+Comando para mostrar o status de um repositório
+	git status
+
 Comando para iniciar um repositório:
 	git init
 
@@ -14,3 +17,23 @@ Comando para commitar, dar commit
 
 Comando para remover arquivo
 	git rm 'Comando em git~'
+
+Comandos para trabalhar com repositório remoto
+	Definir um repositorio remoto. A palavra "origin" é o nome de referencia do repósitório remoto, poderia escolher outro nome de referencia se eu quisesse, por exemplo "repFalso"
+		git remote add origin https://github.com/CarvalhoBarberino/Git-notes.git
+		git remote add repFalso https://blablabla.com/blublublu.git
+
+	Mostrar os nomes de referencia dos repositórios remotos associados ao repositório atual
+		git remote
+
+	Ver opções de comando sobre o repositório escolhido
+		git remote origin
+
+	Ver os endereços de busca (fetche, pull) e de envio (push)
+		git remote -v
+
+	Enviar para o repositório remoto
+		git push
+
+	Enviar para o repositório remoto e sobrescrever o repositório anterior. (Cuidado ao usar este comando. Ele destroi a versão remota do repositório
+		git push -f
