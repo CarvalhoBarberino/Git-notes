@@ -35,5 +35,8 @@ Comandos para trabalhar com repositório remoto
 	Enviar para o repositório remoto
 		git push
 
-	Enviar para o repositório remoto e sobrescrever o repositório anterior. (Cuidado ao usar este comando. Ele destroi a versão remota do repositório
+	Enviar para o repositório remoto e sobrescrever o repositório anterior. (CUIDADO ao usar este comando. Ele destroi a versão remota do repositório
 		git push -f
+		git push --set-upstream origin master
+
+

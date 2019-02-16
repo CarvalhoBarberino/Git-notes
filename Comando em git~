@@ -31,3 +31,12 @@ Comandos para trabalhar com repositório remoto
 
 	Ver os endereços de busca (fetche, pull) e de envio (push)
 		git remote -v
+
+	Enviar para o repositório remoto
+		git push
+
+	Enviar para o repositório remoto e sobrescrever o repositório anterior. (Cuidado ao usar este comando. Ele destroi a versão remota do repositório
+		git push -f
+		git push --set-upstream origin master
+
+
