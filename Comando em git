@@ -6,3 +6,4 @@ Comando para iniciar um repositório:
 
 Comando para adicionar arquivo
 	git add 'Comando em git'
+	git add .
