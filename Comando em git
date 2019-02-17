@@ -21,6 +21,9 @@ Comando para verificar a evolução do repositório
 Comando para remover arquivo
 	git rm 'Comando em git~'
 
+	Comando para remover arquivos com tio de todas as pastas
+		git rm */*~
+
 Comando para clonar um repositório remoto
 	git clone https://github.com/CarvalhoBarberino/Jogo-Nim.git
 

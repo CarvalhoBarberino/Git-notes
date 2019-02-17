@@ -1,0 +1,3 @@
+O .gitignore fazia o git ignorar as mudanças dos arquivos terminados em tio.
+Mas eu deletei os arquivos antes do .gitignore começar a atuar.
+Portanto o git não parava de reclamar a falta dos arquivos mesmo estando no .gitignore
