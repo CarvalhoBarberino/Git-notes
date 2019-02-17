@@ -21,9 +21,6 @@ Comando para verificar a evolução do repositório
 Comando para remover arquivo
 	git rm 'Comando em git~'
 
-Comando para clonar um repositório remoto
-	git clone https://github.com/CarvalhoBarberino/Jogo-Nim.git
-
 Comandos para trabalhar com repositório remoto
 	Definir um repositorio remoto. A palavra "origin" é o nome de referencia do repósitório remoto, poderia escolher outro nome de referencia se eu quisesse, por exemplo "repFalso"
 		git remote add origin https://github.com/CarvalhoBarberino/Git-notes.git
