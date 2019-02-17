@@ -4,5 +4,6 @@
 
 # Se quiser ignorar o proprio .gitignore então basta escrever .gitignore abaixo
 
-
 # todos os arquivos cujo nome termona com tio
+*~
+*.*~
