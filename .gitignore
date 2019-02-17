@@ -1,0 +1,6 @@
+# Este arquivo serve para indicar quais arquivos ficarão de fora do controle de versão.
+# Portanto, todos os arquivos mensionados aqui não serão acompanhados pelo Git.
+# Para escrever comentários, use a hash tag
+
+# todos os arquivos cujo nome termona com tio
+*~
