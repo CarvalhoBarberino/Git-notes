@@ -1,4 +1,4 @@
-Comando para verivicar versão
+Comando para verificar versão
 	git --version
 
 Comando para mostrar o status de um repositório
