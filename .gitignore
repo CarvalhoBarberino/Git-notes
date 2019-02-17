@@ -1,12 +1,14 @@
+.gitignore
+*~
+apa/
 # Este arquivo serve para indicar quais arquivos ficarão de fora do controle de versão.
 # Portanto, todos os arquivos mensionados aqui não serão acompanhados pelo Git.
 # Para escrever comentários, use a hash tag
 
 # ignorar o proprio .gitignore
-.gitignore
+
 
 # todos os arquivos cujo nome termona com tio
-*~
+
 
 # ignorar a pasta .apa
-.apa
