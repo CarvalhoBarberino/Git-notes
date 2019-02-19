@@ -1,0 +1,13 @@
+Este é meu primeiro texto escrito usando o vim.
+Usei o seguinte comando:
+	vim 'texto1'
+Atenção: Não use o camndo vim sem nome de arquivo. Fica dificil pra sair.
+
+Depois que o texto estver escrito vc ira apertar a tecla esc e o cursor ira mudar para o fim da tela.
+Lá vc ira escrever dois pointos(:) que significa que vc ira inserir comandos
+Depois vc ira escrever w que significa escrever, salvar
+Depois vc ira colocar a letra q que significa sair do vim.
+
+:wq
+
+Saiba mais em http://willianjusten.com.br

@@ -1,6 +1,18 @@
 Comando para verificar versão
 	git --version
 
+Comando para configurar nome de usuário
+	git config --global user.name "CarvalhoBarberino"
+
+Comando para configura o email de usuário
+	git config --global user.email "carvalhobarberino1@gmail.com"
+
+Comando para definir um editor de texto. Por padrão já esta definido o vim	
+	git config --global core.editor <comando do editor de texto>
+
+Comando para mostrar as configurações do proprio git
+	git config --list
+
 Comando para mostrar o status de um repositório
 	git status
 
@@ -20,6 +32,7 @@ Comando para verificar a evolução do repositório
 
 Comando para remover arquivo
 	git rm 'Comando em git~'
+	git rm main.cpp
 
 	Comando para remover arquivos com tio de todas as pastas
 		git rm */*~
@@ -50,3 +63,13 @@ Comandos para trabalhar com repositório remoto
 	
 	Baixar atualizações do repositório remoto
 		git pull origin master
+
+
+
+
+
+
+
+
+
+
