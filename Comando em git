@@ -26,6 +26,8 @@ Comando para adicionar arquivo
 
 Comando para commitar, dar commit
 	git commit -m "Escreva aqui seu comentário"
+	Comando para adicionar e commitar ao mesmo tempo
+		git commit -am "Escreva aqui seu comentário"
 
 Comando para verificar a evolução do repositório
 	git log
@@ -46,6 +48,12 @@ Comando para verificar a evolução do repositório
 	Mostra as alteraçoes antes de commitar. Recomendado antes de fazer commit
 		git diff
 		git diff --name-only
+
+Comando para trazer o arquivo ao estado do ultimo commit ou do ultimo add
+	git checkout 'Comando em git'
+
+Comando para resetar o add
+	git reset HEAD 'Nome do arquivo'
 
 Comando para remover arquivo
 	git rm 'Comando em git~'
