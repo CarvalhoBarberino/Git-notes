@@ -29,6 +29,23 @@ Comando para commitar, dar commit
 
 Comando para verificar a evolução do repositório
 	git log
+		Se a lista estiver muito comprida digite 'q' para sair
+	Mostra os 3 ultimos commits
+		git log -3
+	Mostra apenas os primeiros digitos de cada hash
+		git log --pretty=format:"%h"
+	Mostra todos os commits de um determinado autor
+		git log --author="CarvalhoBarberino"
+	Mostra lista de commits
+		git shortlog
+		git shortlog -sn
+	Mostra grafo
+		git log --graph
+	Pesquisa detalhes do commit pelo hash
+		git show 17aa1f448d06547cbcad69f3d58cb32a171bdffd
+	Mostra as alteraçoes antes de commitar. Recomendado antes de fazer commit
+		git diff
+		git diff --name-only
 
 Comando para remover arquivo
 	git rm 'Comando em git~'
