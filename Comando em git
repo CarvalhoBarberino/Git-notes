@@ -63,6 +63,15 @@ Comando para trazer o arquivo ao estado do ultimo commit ou do ultimo add
 Comando para criar um branch
 	git checkout -b 'branchTeste'
 
+	Comando para deletar um branch
+		git branch -D 'nome do branch'
+
+	Mostrar os branchs	
+		git branch
+
+	Mudar para um branch
+		git checkout 'nome do branch'
+
 Comando para resetar o add
 	git reset HEAD 'Nome do arquivo'
 
