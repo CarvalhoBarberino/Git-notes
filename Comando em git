@@ -60,6 +60,9 @@ Comando para verificar a evolução do repositório
 Comando para trazer o arquivo ao estado do ultimo commit ou do ultimo add
 	git checkout 'Comando em git'
 
+Comando para criar um branch
+	git checkout -b 'branchTeste'
+
 Comando para resetar o add
 	git reset HEAD 'Nome do arquivo'
 
