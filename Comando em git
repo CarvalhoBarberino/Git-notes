@@ -60,6 +60,9 @@ Comando para verificar a evolução do repositório
 Comando para trazer o arquivo ao estado do ultimo commit ou do ultimo add
 	git checkout 'Comando em git'
 
+Comando para tornar o repositorio como era após um determinado commit
+	git checkout dd79fcbf174bf882a29b52c1713cd6fe48
+
 Comando para criar um branch
 	git checkout -b 'branchTeste'
 
@@ -109,12 +112,5 @@ Comandos para trabalhar com repositório remoto
 	Baixar atualizações do repositório remoto
 		git pull origin master
 
-
-
-
-
-
-
-
-
-
+Comando para fazer um merge entre o branch atual e o branch teste1
+	git merge teste1
