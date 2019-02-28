@@ -36,6 +36,8 @@ Comando para resetar commits
 		git reset --mixed "58cbdd69f3d32a171bdffd17aa1f44806547cbca"
 	Para resetar até o estado do commit de hash 58cbdd69f3d32a171bdffd17aa1f44806547cbca
 		git reset --hard "58cbdd69f3d32a171bdffd17aa1f44806547cbca"
+	Para resetar até um ponto antes do merge
+		git reset --merge
 
 Comando para verificar a evolução do repositório
 	git log
