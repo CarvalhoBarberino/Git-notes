@@ -39,8 +39,17 @@ Comando para resetar commits
 	Para resetar até um ponto antes do merge
 		git reset --merge
 
+Comando para reverter um commit. Este comando cria um novo commit que volta no penultimo estado do repósitório.
+	git revert 4c2d186928b42b4cebce2b63eac9ab412a338b0a
+
 Comando para criar uma tag onde o argumento -a indica o numero da versão e o argumento -m indica uma mensagem
 	git tag -a 1.0.0 -m "Digite aqui sua mensagem"
+
+	Comando para apagar uma tag localmente (este comando não apaga as tags do repositório remoto)
+		git tag -d 1.0.0
+
+	Comando para apagar uma tag do repositorio remoto
+		git push origin :1.0.0
 
 Comando para verificar a evolução do repositório
 	git log
@@ -73,6 +82,9 @@ Comando para criar um branch
 
 	Comando para deletar um branch
 		git branch -D 'nome do branch'
+
+	Comando para deletar um branch remoto
+		git push origin :teste
 
 	Mostrar os branchs	
 		git branch
