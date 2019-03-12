@@ -39,6 +39,9 @@ Comando para resetar commits
 	Para resetar até um ponto antes do merge
 		git reset --merge
 
+Comando para criar uma tag onde o argumento -a indica o numero da versão e o argumento -m indica uma mensagem
+	git tag -a 1.0.0 -m "Digite aqui sua mensagem"
+
 Comando para verificar a evolução do repositório
 	git log
 		Se a lista estiver muito comprida digite 'q' para sair
@@ -106,6 +109,9 @@ Comandos para trabalhar com repositório remoto
 
 	Enviar para o repositório remoto
 		git push
+
+	Envia as tags para o repositório remoto
+		git push origin master --tags
 
 	Enviar para o repositório remoto e sobrescrever o repositório anterior. (CUIDADO ao usar este comando. Ele destroi a versão remota do repositório)
 		git push -f
