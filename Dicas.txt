@@ -1,0 +1,34 @@
+não use i++ pq eh lento, use ++i
+prefira usar nullptr ao invez de NULL e 0 para ponteiros
+
+Referencia tem que ser inicializada: int x; int &rx = x;
+Pesquisar o que é Doxygen
+
+a palavra reservada "mutable" serve para declarar uma variavel que seja mutavel apesar da instrução "const"
+
+variavel global é declarada fora de qualquer par de chaves portanto fora do main.
+
+pesquisar as palavras chaves: "explicit" "friend"
+
+metodos estaticos só podem alterar metodos estaticos pois não possuem o ponteiro para a instancia já que metodos estaticos não são instanciados.
+
+Funções templates só podem ser escritas em arquivos .h pois apenas um desenvolvedor de compilador conseguiu implementar templates em arquivos .cpp. O compilador Comeau foi o unico que consegiu desenvolver um meio para implementar funções templates dentro de arquivos .cpp
+
+Função "virtual" em C++ equivale a "abstract" no JAVA
+
+Das quatro formas de cast que existem no C++, apenas o dynamic cast é uma boa pratica
+
+Pesquisar o que é fragmentação de memoria
+
+Pesquisar sandbox
+
+//F9 = Breake Point
+//F5 = Executar em modo Debug
+//F10 = Executar linha a linha
+//F11 = Entrar em uma função
+//Selecionar tudo, apertar Ctrl + /
+
+https://www.cpplovers.com/
+http://www.stroustrup.com/
+https://en.cppreference.com/w/
+https://www.dropbox.com/s/6ucv54vkeirtpmt/CPP_11_14_17.pdf?dl=0
