@@ -86,6 +86,9 @@ Comando para criar um branch
 	Comando para deletar um branch remoto
 		git push origin :teste
 
+	Comando para mudar o nome de um branch
+		git branch -m <old-name> <new-name>
+
 	Mostrar os branchs	
 		git branch
 
@@ -134,3 +137,39 @@ Comandos para trabalhar com repositório remoto
 
 Comando para fazer um merge entre o branch atual e o branch teste1
 	git merge teste1
+
+O problema do "HEAD detached from"
+	Este problema ocorre quando usamos o comando checkout que acaba mudando o ponteiro HEAD para
+	um commit diferente do atual de maneira que um dos commites validos fica sem referencia e somente
+	pode ser encontrado atravez de seu hash.
+	Isso pode se tornar um problema pois branch sem referencia nunca são listados no comando "git log"
+	
+	A solução pode ser um pouco arriscada pois pode se deletar o acesso a um branch.
+	Soh use sete método se vc tiver certeza que não vai deletar um branch e se arrepender depois.
+	Temos que fazer o estado atual se tornar o branch master.
+	Mas se o ponteiro master já existir então teremos que apaga-lo e faze-lo de novo apontando para o estado atual.
+	usando o comando abaixo:
+		git branch -D master
+	Depois disso faça o estado atual se chamar master usando o comando abaixo:
+		git checkout -b master
+		git status
+	
+	Existe outro jeito menos arriscado de se resolver este problema mas é mais complicado.
+	Vc precisa inventar um nomeAuxiliar1 para o branch atual usando o comando:
+		git checkout -b nomeAuxiliar1
+	Depois vc precisa ir até o estado master usando o comando:
+		git checkout master
+	Depois criar um outro ponteiro que tambem aponta para o estado atual usando o comando:
+		git checkout -b nomeAuxiliar2
+	Repare que neste ponto do processo temos dois ponteiros apontando para o mesmo estado.
+	O nomeAuxiliar2 e master apontam para o mesmo estado então não vamos perder nada se deletarmos o master
+	Depois vc passa para o estado nomeAuxiliar2 usando o comando:
+		git checkout nomeAuxiliar2
+	Depois vc deleta o ponteiro master usando o comando:
+		git branch -D master
+	Depois vc precisa voltar ao branch de nomeAuxiliar1 e tornar este branch o master usando os comandos:
+		git checkout nomeAuxiliar1
+		git checkout -b master
+		git branch -D nomeAuxiliar1
+		git status
+	Depois vc decide se quer apagar ou não o outro branch.
