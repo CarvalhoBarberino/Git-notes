@@ -61,6 +61,7 @@ Comando para verificar a evolução do repositório
 	Mostra todos os commits de um determinado autor
 		git log --author="CarvalhoBarberino"
 	Mostra lista de commits
+		git log --oneline
 		git shortlog
 		git shortlog -sn
 	Mostra grafo
