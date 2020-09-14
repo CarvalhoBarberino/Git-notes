@@ -98,6 +98,10 @@ Comando para criar um branch
 Comando para resetar o add
 	git reset HEAD 'Nome do arquivo'
 
+Comando para resetar todos os arquivos adicionados atravéz do add
+	git reset HEAD .
+	git reset HEAD *
+
 Comando para remover arquivo
 	git rm 'Comando em git~'
 	git rm main.cpp
