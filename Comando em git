@@ -144,37 +144,77 @@ Comando para fazer um merge entre o branch atual e o branch teste1
 	git merge teste1
 
 O problema do "HEAD detached from"
-	Este problema ocorre quando usamos o comando checkout que acaba mudando o ponteiro HEAD para
-	um commit diferente do atual de maneira que um dos commites validos fica sem referencia e somente
-	pode ser encontrado atravez de seu hash.
-	Isso pode se tornar um problema pois branch sem referencia nunca são listados no comando "git log"
-	
-	A solução pode ser um pouco arriscada pois pode se deletar o acesso a um branch.
-	Soh use sete método se vc tiver certeza que não vai deletar um branch e se arrepender depois.
-	Temos que fazer o estado atual se tornar o branch master.
-	Mas se o ponteiro master já existir então teremos que apaga-lo e faze-lo de novo apontando para o estado atual.
-	usando o comando abaixo:
-		git branch -D master
-	Depois disso faça o estado atual se chamar master usando o comando abaixo:
-		git checkout -b master
-		git status
-	
-	Existe outro jeito menos arriscado de se resolver este problema mas é mais complicado.
-	Vc precisa inventar um nomeAuxiliar1 para o branch atual usando o comando:
-		git checkout -b nomeAuxiliar1
-	Depois vc precisa ir até o estado master usando o comando:
-		git checkout master
-	Depois criar um outro ponteiro que tambem aponta para o estado atual usando o comando:
-		git checkout -b nomeAuxiliar2
-	Repare que neste ponto do processo temos dois ponteiros apontando para o mesmo estado.
-	O nomeAuxiliar2 e master apontam para o mesmo estado então não vamos perder nada se deletarmos o master
-	Depois vc passa para o estado nomeAuxiliar2 usando o comando:
-		git checkout nomeAuxiliar2
-	Depois vc deleta o ponteiro master usando o comando:
-		git branch -D master
-	Depois vc precisa voltar ao branch de nomeAuxiliar1 e tornar este branch o master usando os comandos:
-		git checkout nomeAuxiliar1
-		git checkout -b master
-		git branch -D nomeAuxiliar1
-		git status
-	Depois vc decide se quer apagar ou não o outro branch.
+	Melhor solução até agora. segue registro do terminal:
+		carvalho@carvalho-Inspiron-N4050:~/Desktop/Py/AdmTrackerPy$ git status
+		HEAD detached at 0f0f5c3
+		Changes not staged for commit:
+		  (use "git add <file>..." to update what will be committed)
+		  (use "git checkout -- <file>..." to discard changes in working directory)
+
+			modified:   AdmTracker.py
+			modified:   Dat.dat
+
+		no changes added to commit (use "git add" and/or "git commit -a")
+		carvalho@carvalho-Inspiron-N4050:~/Desktop/Py/AdmTrackerPy$ git commit -am "Deu problema no json. HEAD detached at 0f0f5c3"
+		[detached HEAD 0649893] Deu problema no json. HEAD detached at 0f0f5c3
+		 2 files changed, 404 insertions(+), 2 deletions(-)
+		 rewrite Dat.dat (100%)
+		carvalho@carvalho-Inspiron-N4050:~/Desktop/Py/AdmTrackerPy$ git status
+		HEAD detached from 0f0f5c3
+		nothing to commit, working directory clean
+		carvalho@carvalho-Inspiron-N4050:~/Desktop/Py/AdmTrackerPy$ git checkout master
+		Warning: you are leaving 1 commit behind, not connected to
+		any of your branches:
+
+		  0649893 Deu problema no json. HEAD detached at 0f0f5c3
+
+		If you want to keep it by creating a new branch, this may be a good time
+		to do so with:
+
+		 git branch <new-branch-name> 0649893
+
+		Switched to branch 'master'
+		carvalho@carvalho-Inspiron-N4050:~/Desktop/Py/AdmTrackerPy$ git branch defeitoNoJson0649893 0649893
+		carvalho@carvalho-Inspiron-N4050:~/Desktop/Py/AdmTrackerPy$ git status
+		On branch master
+		nothing to commit, working directory clean
+		carvalho@carvalho-Inspiron-N4050:~/Desktop/Py/AdmTrackerPy$ git branch
+		  defeitoNoJson0649893
+		* master
+		carvalho@carvalho-Inspiron-N4050:~/Desktop/Py/AdmTrackerPy$ 
+
+	Não é a melhor solução:
+		Este problema ocorre quando usamos o comando checkout que acaba mudando o ponteiro HEAD para
+		um commit diferente do atual de maneira que um dos commites validos fica sem referencia e somente
+		pode ser encontrado atravez de seu hash.
+		Isso pode se tornar um problema pois branch sem referencia nunca são listados no comando "git log"
+
+		A solução pode ser um pouco arriscada pois pode se deletar o acesso a um branch.
+		Soh use sete método se vc tiver certeza que não vai deletar um branch e se arrepender depois.
+		Temos que fazer o estado atual se tornar o branch master.
+		Mas se o ponteiro master já existir então teremos que apaga-lo e faze-lo de novo apontando para o estado atual.
+		usando o comando abaixo:
+			git branch -D master
+		Depois disso faça o estado atual se chamar master usando o comando abaixo:
+			git checkout -b master
+			git status
+
+		Existe outro jeito menos arriscado de se resolver este problema mas é mais complicado.
+		Vc precisa inventar um nomeAuxiliar1 para o branch atual usando o comando:
+			git checkout -b nomeAuxiliar1
+		Depois vc precisa ir até o estado master usando o comando:
+			git checkout master
+		Depois criar um outro ponteiro que tambem aponta para o estado atual usando o comando:
+			git checkout -b nomeAuxiliar2
+		Repare que neste ponto do processo temos dois ponteiros apontando para o mesmo estado.
+		O nomeAuxiliar2 e master apontam para o mesmo estado então não vamos perder nada se deletarmos o master
+		Depois vc passa para o estado nomeAuxiliar2 usando o comando:
+			git checkout nomeAuxiliar2
+		Depois vc deleta o ponteiro master usando o comando:
+			git branch -D master
+		Depois vc precisa voltar ao branch de nomeAuxiliar1 e tornar este branch o master usando os comandos:
+			git checkout nomeAuxiliar1
+			git checkout -b master
+			git branch -D nomeAuxiliar1
+			git status
+		Depois vc decide se quer apagar ou não o outro branch.
