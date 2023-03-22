@@ -110,6 +110,15 @@ Comando para remover arquivo
 	Comando para remover arquivos com tio de todas as pastas
 		git rm */*~
 
+Comando para renomear um arquivo
+	Importante renomear um arquivo e alterar o conteudo do arquivo no mesmo commit, pode deixar o git confuso.
+	Idealmente, alterar o arquivo, commitar, renomear e commitar novamente.
+	Mas caso você realmente precise alterar e renomear ao mesmo tempo:
+		Faca as alteracoes necessarias
+		git mv file1.txt 'file 2.txt'
+		git add *
+		git commit -m "Renomear arquivo de file1.txt para file 2.txt"
+
 Comando para clonar um repositório remoto
 	git clone https://github.com/CarvalhoBarberino/Jogo-Nim.git
 
